@@ -11,7 +11,6 @@ To use this library you need to install it using:
 
 ## Basic usage
 ```
-<script type="javascript">
 import { Form, FormElement } from 'sard-form'
 
 const MyForm = () => {
@@ -61,7 +60,6 @@ const MyForm = () => {
     )
 }
 
-</script>
 ```
 
 ### Usage with react-hook-form
