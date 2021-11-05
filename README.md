@@ -62,7 +62,7 @@ const MyForm = () => {
 
 ```
 
-### Usage with react-hook-form
+## Usage with react-hook-form
 
 ```
 const LoginForm = () => {
