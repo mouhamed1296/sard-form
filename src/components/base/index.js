@@ -1,3 +1,4 @@
 import FormElement from './FormElement'
 import Form from './Form'
-export {Form, FormElement}
+import { VRules } from './ValidationRules'
+export {Form, FormElement, VRules}
