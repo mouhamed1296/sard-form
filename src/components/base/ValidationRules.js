@@ -5,21 +5,23 @@ export const VRules = () => {
     const string_with_space_pattern = /^[A-Za-z\s]+$/
 
     return ({
-        Required: (m="required") => ({value: true, message: m}),
-        Email: (m="invalid email", p=mail_pattern) => ({value: p, message: m}),
-        MaxLength: (m="Too much charachter", l=4) => ({value: l, message: m}),
-        MinLength: (m="Not enough character", l=1) => ({value: l, message: m}),
-        Min: (m="Too small value", v=1) => ({value: v, message: m}),
-        Max: (m="Too large value", v=10) => ({value: v, message:m}),
-        String: (m="this field only accepts strings",  with_space=false, p=string_pattern) => {
+        Required: (message="required") => ({value: true, message: message}),
+        Email: (message="invalid email") => ({value: mail_pattern, message: message}),
+        MaxLength: (message="Too much charachter", length=4) => ({value: length, message: message}),
+        MinLength: (message="Not enough character", length=1) => ({value: length, message: message}),
+        Min: (message="Too small value", value=1) => ({value: value, message: message}),
+        Max: (message="Too large value", value=10) => ({value: value, message:message}),
+        String: (message="this field only accepts strings",  with_space=false) => {
+            let pattern = string_pattern
             if (with_space) {
-                p = string_with_space_pattern
+                pattern = string_with_space_pattern
             }
             return ({
-                value: p,
-                message: m
+                value: pattern,
+                message: message
             })
         },
-        Number: (m="this field only accepts numbers", p=number_pattern) => ({value: p, m})
+        Number: (message="this field only accepts numbers") => ({value: number_pattern, message}),
+        Pattern: (pattern, message) => ({value: pattern, message: message})
     })
 }
