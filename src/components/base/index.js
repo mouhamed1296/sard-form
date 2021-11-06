@@ -1,4 +1,5 @@
 import FormElement from './FormElement'
 import Form from './Form'
 import { VRules } from './ValidationRules'
-export {Form, FormElement, VRules}
+import { ShowErrorMessage } from './ShowErrorMessage'
+export { Form, FormElement, VRules, ShowErrorMessage }
