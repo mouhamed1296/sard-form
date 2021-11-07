@@ -107,7 +107,7 @@ const FormElement = React.forwardRef((props, ref) => {
     } else if (!inputTypes.includes(fieldProps.type)){
         formElement = <input placeholder="invalid input type" style={{color: "red"}} disabled />
     }
-    //console.log(props.label)
+    console.log(labelProps)
     if (fieldProps.id && labelProps) {
         if (typeof labelProps === "boolean" || typeof labelProps === "string") {
             <label htmlFor={fieldProps.id}>
