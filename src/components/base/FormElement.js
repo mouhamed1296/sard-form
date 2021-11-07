@@ -113,10 +113,11 @@ const FormElement = React.forwardRef((props, ref) => {
             <label htmlFor={fieldProps.id}>
                 {labelProps}
             </label>
+        } else {
+            label = <label htmlFor={fieldProps.id} className={labelProps.className} style={labelProps.style}>
+                {labelProps.content}
+            </label>
         }
-        label = <label htmlFor={fieldProps.id} className={labelProps.className} style={labelProps.style}>
-            {labelProps.content}
-        </label>
     }
 
     if(wrapperProps) {
