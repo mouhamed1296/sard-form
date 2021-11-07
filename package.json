@@ -1,6 +1,6 @@
 {
   "name": "sard-form",
-  "version": "1.1.4-beta",
+  "version": "1.1.4-beta1",
   "description": "A smart and simple react library that helps you create and handle forms in a declarative way",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
