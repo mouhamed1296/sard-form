@@ -1,4 +1,4 @@
-![alt text](https://github.com/mouhamed1296/sard-form/blob/main/img/sard-form-logo.png)
+<p align="center">![alt text](https://github.com/mouhamed1296/sard-form/blob/main/img/sard-form-logo.png)</p>
 
 # <h1 align="center">sard-form :heart: :boom: :rocket:</h1>
 ***
