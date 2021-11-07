@@ -19,7 +19,7 @@ export default [
         ],
         plugins: [
             babel({
-                exclude: 'node_modules/**',
+                exclude: ['node_modules/**', 'img/**'],
                 presets: ['@babel/preset-react']
             }),
             external(),
