@@ -109,7 +109,7 @@ const FormElement = React.forwardRef((props, ref) => {
     }
     //console.log(props.label)
     if (fieldProps.id && labelProps) {
-        if (labelProps === "" || typeof labelProps === "boolean" || typeof labelProps === "string") {
+        if (typeof labelProps === "boolean" || typeof labelProps === "string") {
             <label htmlFor={fieldProps.id}>
                 {labelProps}
             </label>
