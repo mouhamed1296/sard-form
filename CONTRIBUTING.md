@@ -1,7 +1,7 @@
 # Contribute to this Project
 
 👋🏽 Thanks for showing interest and helping out  
-If you get stuck somewhere, contact us at **[Gmail](mbayelel@gmail.com)** 🤙🏾
+If you get stuck somewhere, contact us at **(mbayelel@gmail.com)** 🤙🏾
 
 ## Requirements 🎯
 
