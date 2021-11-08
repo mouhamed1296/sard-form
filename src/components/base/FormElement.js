@@ -9,6 +9,7 @@ const FormElement = React.forwardRef((props, ref) => {
     const inputTypes = [
         "text",
         "submit",
+        "number",
         "email",
         "password",
         "week",
