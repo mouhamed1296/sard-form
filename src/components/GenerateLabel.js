@@ -15,9 +15,7 @@ const GenerateLabel = ({labelProps, children, fieldId}) => {
         </label>
     }
 
-    return (
-        {label}
-    )
+    return label
 }
 
 export default GenerateLabel
