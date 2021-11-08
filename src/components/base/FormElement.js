@@ -110,13 +110,13 @@ const FormElement = React.forwardRef((props, ref) => {
     }
     //console.log(typeof labelProps)
     if (fieldProps.id && labelProps) {
-       label = <GenerateLabel labelProps={labelProps} />
+       label = <GenerateLabel labelProps={labelProps} fieldId={fieldProps.id} />
     }
 
     if(wrapperProps) {
         if(wrapperProps.in === "label") {
             return (
-                <GenerateLabel labelProps={labelProps}>
+                <GenerateLabel labelProps={labelProps} fieldId={fieldProps.id}>
                     {formElement}
                     {errorMessage}
                 </GenerateLabel>

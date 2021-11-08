@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GenerateLabel = ({labelProps, children}) => {
+const GenerateLabel = ({labelProps, children, fieldId}) => {
     let label = null
 
     if (labelProps.content || labelProps.className || labelProps.style) {
