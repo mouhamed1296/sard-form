@@ -1,5 +1,6 @@
 import React from 'react'
 import ErrorMessage from '../ErrorMessage'
+import GenerateLabel from '../GenerateLabel'
 
 const FormElement = React.forwardRef((props, ref) => {
     const fieldProps = Object.fromEntries(Object.entries(props).filter(prop => {
@@ -107,27 +108,18 @@ const FormElement = React.forwardRef((props, ref) => {
     } else if (!inputTypes.includes(fieldProps.type)){
         formElement = <input placeholder="invalid input type" style={{color: "red"}} disabled />
     }
-    console.log(typeof labelProps)
+    //console.log(typeof labelProps)
     if (fieldProps.id && labelProps) {
-        if (labelProps.content || labelProps.className || labelProps.style) {
-            label = <label htmlFor={fieldProps.id} className={labelProps.className} style={labelProps.style}>
-                {labelProps.content}
-            </label>
-        } else {
-            label = <label htmlFor={fieldProps.id}>
-                {labelProps}
-            </label>
-        }
+       label = <GenerateLabel labelProps={labelProps} />
     }
 
     if(wrapperProps) {
         if(wrapperProps.in === "label") {
             return (
-                <label className={labelProps.className}>
-                    {labelProps.content}
+                <GenerateLabel labelProps={labelProps}>
                     {formElement}
                     {errorMessage}
-                </label>
+                </GenerateLabel>
             )
         }
         if(wrapperProps.in ==="div>label") {
