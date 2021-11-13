@@ -3,6 +3,8 @@ export const VRules = () => {
     const string_pattern = /^[A-Za-z]+$/
     const number_pattern = /^[0-9]+$/
     const string_with_space_pattern = /^[A-Za-z\s]+$/
+    const alpha_num_pattern = /^[A-Za-z0-9]+$/
+    const alpha_num_with_space_pattern = /^[A-Za-z0-9\s]+$/
 
     return ({
         Required: (message="required") => ({value: true, message: message}),
@@ -12,16 +14,24 @@ export const VRules = () => {
         Min: (message="Too small value", value=1) => ({value: value, message: message}),
         Max: (message="Too large value", value=10) => ({value: value, message:message}),
         String: (message="this field only accepts strings",  with_space=false) => {
-            let pattern = string_pattern
-            if (with_space) {
-                pattern = string_with_space_pattern
-            }
-            return ({
-                value: pattern,
+            return with_space ? ({
+                value: string_with_space_pattern,
+                message: message
+            }) : ({
+                value: string_pattern,
                 message: message
             })
         },
         Number: (message="this field only accepts numbers") => ({value: number_pattern, message}),
+        AlphaNum:  (message="this field only accepts alphanumeric strings",  with_space=false) => {
+            return with_space ? ({
+                value: alpha_num_with_space_pattern,
+                message: message
+            }) : ({
+                value: alpha_num_pattern,
+                message: message
+            })
+        },
         Pattern: (pattern, message) => ({value: pattern, message: message})
     })
 }

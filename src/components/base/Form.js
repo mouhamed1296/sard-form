@@ -1,5 +1,5 @@
 import React from "react"
-const Form = ({method, action, className, onSubmit, onReset, encType, children, id}) => {
+const Form = ({method, action, className, onSubmit, onReset, encType, children, id, onInput}) => {
     return (
         <form
             method={method}
@@ -9,6 +9,7 @@ const Form = ({method, action, className, onSubmit, onReset, encType, children, 
             onReset={onReset}
             encType={encType}
             id={id}
+            onInput={onInput}
         >
             {children}
         </form>
